@@ -10,6 +10,11 @@
   align-items: center;
   justify-content: center;
 
+  @include respond(tablet) {
+    align-items: flex-start;
+    padding-top: 10rem;
+  }
+
   &__box {
     background-color: $color-secondary-1;
     width: 50%;
