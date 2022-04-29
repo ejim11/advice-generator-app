@@ -1,0 +1,28 @@
+@import "./SCSS/base.scss";
+@import "./SCSS/mixin";
+
+// general default styling
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%; // 1rem =16px;
+
+  @include respond(laptop) {
+    font-size: 62.5%; // 1rem =10px;
+  }
+}
+
+body {
+  font-family: $font-display;
+}
+
+img {
+  max-width: 100%;
+}

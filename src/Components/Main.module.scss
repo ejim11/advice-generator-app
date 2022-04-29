@@ -1,0 +1,68 @@
+@import "../SCSS/base";
+@import "../SCSS/animations";
+@import "../SCSS/mixin";
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: $color-secondary-3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__box {
+    background-color: $color-secondary-1;
+    width: 50%;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem;
+    align-items: center;
+    position: relative;
+
+    @include respond(tablet) {
+      width: 60%;
+    }
+
+    @include respond(phone) {
+      width: 90%;
+    }
+
+    &-advice-number {
+      font-size: 1.2rem;
+      color: $color-primary-2;
+    }
+
+    &-advice-text {
+      font-size: 2.5rem;
+      color: $color-primary-1;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+
+    &-logo-pattern {
+      margin: 1rem 0 2.5rem 0;
+    }
+
+    &-logo-dice {
+      padding: 1rem;
+      background-color: $color-primary-2;
+      border-radius: 100rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: -2rem;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0.25rem -0.5rem 4rem 0.5rem rgba($color-primary-2, 0.8);
+      }
+    }
+  }
+}
+
+.isloading {
+  display: block;
+  animation: App-logo-spin infinite 200ms linear;
+}
